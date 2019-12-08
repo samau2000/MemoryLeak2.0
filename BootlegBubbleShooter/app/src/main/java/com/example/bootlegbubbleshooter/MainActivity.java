@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     MediaPlayer mainscreenmusic;
     private Button SettingsButton;
+    private Button StartButton;
 
     //Screen Size
     private int screenWidth;
@@ -114,7 +115,13 @@ public class MainActivity extends AppCompatActivity {
             }
         },0,10);
 
-
+        //Start Button
+        StartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StartOnClick();
+            }
+        });
 
     }
 
@@ -134,6 +141,13 @@ public class MainActivity extends AppCompatActivity {
     public void SettingsOnClick()
     {
         Intent intent = new Intent(this,SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    //Navigate to Start Button
+    public void StartOnClick()
+    {
+        Intent intent = new Intent(this,Levels.class);
         startActivity(intent);
     }
 
