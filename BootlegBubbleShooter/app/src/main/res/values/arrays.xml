@@ -1,0 +1,15 @@
+<resources>
+    <!-- Level Preference -->
+    <string-array name="level_entries">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+
+    </string-array>
+
+    <string-array name="level_values">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+</resources>

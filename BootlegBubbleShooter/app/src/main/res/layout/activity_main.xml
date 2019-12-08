@@ -2,56 +2,95 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/HomeScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#19E7D3"
+    android:background="#C3DFF3"
+    android:clickable="true"
+    android:keepScreenOn="true"
+    android:soundEffectsEnabled="true"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/Cloud1"
+        android:layout_width="188dp"
+        android:layout_height="56dp"
+        android:src="@drawable/cloud"
+        tools:layout_editor_absoluteX="-29dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/Cloud2"
+        android:layout_width="243dp"
+        android:layout_height="57dp"
+        android:src="@drawable/cloud"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <ImageView
+        android:id="@+id/Cloud3"
+        android:layout_width="224dp"
+        android:layout_height="47dp"
+        android:src="@drawable/cloud"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="298dp"
-        android:layout_height="64dp"
+        android:id="@+id/GameTitle"
+        android:layout_width="393dp"
+        android:layout_height="261dp"
         android:text="Memory Leak"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="36sp"
-        app:fontFamily="sans-serif"
+        android:textSize="70sp"
+        app:fontFamily="@font/alex_brush"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.699"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintVertical_bias="0.217" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/StartButton"
         android:layout_width="140dp"
         android:layout_height="86dp"
         android:layout_marginStart="132dp"
         android:layout_marginLeft="132dp"
         android:layout_marginTop="309dp"
-        android:layout_marginEnd="139dp"
-        android:layout_marginRight="139dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
         android:layout_marginBottom="451dp"
         android:text="Start"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="146dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="126dp"
-        android:layout_marginLeft="126dp"
+        android:id="@+id/SettingsButton"
+        android:layout_width="140dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
         android:layout_marginTop="462dp"
-        android:layout_marginEnd="139dp"
-        android:layout_marginRight="139dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
         android:layout_marginBottom="303dp"
+        android:onClick="SettingsOnClick"
+        android:soundEffectsEnabled="true"
         android:text="Settings"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
