@@ -4,15 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D4EFF7"
+    android:background="#C3DFF3"
     tools:context=".Levels">
 
     <TextView
         android:id="@+id/QuestionBox"
         android:layout_width="376dp"
         android:layout_height="227dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="583dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="36dp"
         android:text="Question Goes HERE!!!"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="583dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="188dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginRight="115dp"
+        android:layout_marginBottom="537dp"
+        android:background="#00B62828"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/QuestionBox"
+        app:layout_constraintEnd_toStartOf="@+id/pauseButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="7dp"
+        android:text="Pause"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/CloudA"
+        android:layout_width="188dp"
+        android:layout_height="56dp"
+        android:src="@drawable/clouda"
+        tools:layout_editor_absoluteX="-42dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <ImageView
+        android:id="@+id/CloudB"
+        android:layout_width="243dp"
+        android:layout_height="57dp"
+        android:src="@drawable/cloudb"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <ImageView
+        android:id="@+id/CloudC"
+        android:layout_width="224dp"
+        android:layout_height="47dp"
+        android:src="@drawable/cloudc"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="77dp" />
+
+    <ImageView
+        android:id="@+id/CloudD"
+        android:layout_width="224dp"
+        android:layout_height="47dp"
+        android:src="@drawable/cloudd"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="124dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

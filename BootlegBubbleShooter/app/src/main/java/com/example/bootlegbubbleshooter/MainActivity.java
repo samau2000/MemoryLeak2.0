@@ -12,9 +12,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private Handler handler = new Handler();
     private Timer timer = new Timer();
 
-    public MainActivity() {
-    }
+    //Fun Fact text
+    public static TextView data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,6 +125,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Fun Fact Data
+        data = (TextView) findViewById(R.id.funFact);
+        fetchFunFactData process = new fetchFunFactData();
+        process.execute();
     }
 
     protected void onPause()
@@ -158,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         if(cloud1.getY() > screenHeight)
         {
             cloud1X = 1*screenWidth/5;//(float)Math.floor(Math.random() * (screenWidth - cloud1.getWidth()));
-            cloud1Y = -190.0f;
+            cloud1Y = -195.0f;
         }
         cloud1.setX(cloud1X);
         cloud1.setY(cloud1Y);
