@@ -34,8 +34,8 @@ public class Levels extends AppCompatActivity {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_MOVE:
-                rocketButton.setX((int) event.getX());
-                rocketButton.setY((int) event.getY());
+                rocketButton.setX((int) event.getX() - 165);
+                rocketButton.setY(900);
         }
         return true;
     }
