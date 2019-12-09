@@ -45,9 +45,11 @@ public class Levels extends AppCompatActivity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         rocketButton = (ImageButton)findViewById(R.id.imageButton6);
+        bullet = (ImageView)findViewById(R.id.imageView2);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 //Toast.makeText(Levels.this, "It works", Toast.LENGTH_LONG).show();
+                bullet.setVisibility(View.GONE);
 
             case MotionEvent.ACTION_MOVE:
                 rocketButton.setX((int) event.getX() - 165);
