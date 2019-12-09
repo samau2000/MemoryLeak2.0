@@ -30,8 +30,8 @@ public class Levels extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Levels.this, "It works", Toast.LENGTH_LONG).show();
-                x_bullet = rocketButton.getX() - 165;
-                y_bullet = rocketButton.getY() - 900;
+                x_bullet = rocketButton.getX() + 165;
+                y_bullet = rocketButton.getY() - 90;
                 bullet.setX(x_bullet);
                 bullet.setY(y_bullet);
                 bullet.setVisibility(View.VISIBLE);
