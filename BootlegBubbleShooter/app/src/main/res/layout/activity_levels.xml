@@ -84,4 +84,18 @@
         android:src="@drawable/cloudd"
         tools:layout_editor_absoluteX="259dp"
         tools:layout_editor_absoluteY="124dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="201dp"
+        android:background="#C3DFF3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CloudB"
+        app:srcCompat="@drawable/rocket" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

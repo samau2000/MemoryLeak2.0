@@ -186,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
         }
         cloud3.setX(cloud3X);
         cloud3.setY(cloud3Y);
-        
+
     }
+
 }
