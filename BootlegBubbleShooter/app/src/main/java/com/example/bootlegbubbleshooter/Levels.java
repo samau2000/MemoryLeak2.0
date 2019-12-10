@@ -23,6 +23,8 @@ public class Levels extends AppCompatActivity {
 
     float x, y;
     float x_bullet,y_bullet;
+    float cloudAY;
+    float cloudAYorig;
 
     ImageView cloudA ;
     ImageView cloudB ;
@@ -40,6 +42,9 @@ public class Levels extends AppCompatActivity {
 
         cloudA = (ImageView)findViewById(R.id.CloudA);
         cloudA.setX(-46); cloudA.setY(80);
+        cloudAY = cloudA.getY();
+        cloudAYorig= cloudAY;
+
 
 //        cloudB.setX(27); cloudB.setY(157);
 //        cloudC.setX(87); cloudC.setY(50);
@@ -104,6 +109,9 @@ public class Levels extends AppCompatActivity {
     private int screenWidth;
     private int screenHeight;
 
+    //cloudAY = cloudA.getY();
+ //   float cloudAYorig= cloudAY;
+
     public void changePos()
     {
 
@@ -112,17 +120,20 @@ public class Levels extends AppCompatActivity {
 
         if(bullet.getY() < (float)screenHeight)
         {
-            y_bullet = -195.0f;
+           // y_bullet.setVisibility(View.GONE);
         }
 
         bullet.setY(y_bullet);
-//
-//        float cloudAX = cloudA.getX();
-//        float cloudAY = cloudA.getY();
-//        cloudAY +=10;
-//        if(cloudA.getY() > screenHeight)
-//        {
-//            cloudAX = 1*screenWidth/5;//(float)Math.floor(Math.random() * (screenWidth - cloud1.getWidth()));
+
+   //    float cloudAX = cloudA.getX();
+
+        cloudAY +=10;
+       if(cloudA.getY() > 2600) {
+           cloudAY=0.0f;
+       }
+       cloudA.setY(cloudAY);
+        {
+ //           cloudAX = 1*screenWidth/5;//(float)Math.floor(Math.random() * (screenWidth - cloud1.getWidth()));
 //            cloudAY = -195.0f;
 //        }
 //        cloudA.setX(cloudAX);
@@ -149,4 +160,4 @@ public class Levels extends AppCompatActivity {
     }
 
 
-}
+}}
