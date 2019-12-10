@@ -29,6 +29,7 @@ public class Levels extends AppCompatActivity {
     ImageView cloudC = (ImageView)findViewById(R.id.CloudC);
     ImageView cloudD = (ImageView)findViewById(R.id.CloudD);
 
+
     //Question text
     public static TextView q_data;
 
@@ -93,10 +94,23 @@ public class Levels extends AppCompatActivity {
         }
         return true;
     }
+    //initialize screen size
+    private int screenWidth;
+    private int screenHeight;
 
-    @Override
     public void changePos()
     {
+
+        y_bullet-=10;
+
+
+        if(bullet.getY() < (float)screenHeight)
+        {
+            y_bullet = -195.0f;
+        }
+
+        bullet.setY(y_bullet);
+        /*
         cloud1Y +=10;
         if(cloud1.getY() > screenHeight)
         {
@@ -123,7 +137,7 @@ public class Levels extends AppCompatActivity {
         }
         cloud3.setX(cloud3X);
         cloud3.setY(cloud3Y);
-
+    */
     }
 
 
