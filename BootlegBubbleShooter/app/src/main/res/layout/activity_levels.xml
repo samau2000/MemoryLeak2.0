@@ -27,17 +27,17 @@
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="188dp"
-        android:layout_height="30dp"
+        android:layout_width="184dp"
+        android:layout_height="42dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="115dp"
         android:layout_marginRight="115dp"
-        android:layout_marginBottom="537dp"
+        android:layout_marginBottom="75dp"
         android:background="#00B62828"
         android:clickable="false"
-        app:layout_constraintBottom_toTopOf="@+id/QuestionBox"
+        app:layout_constraintBottom_toTopOf="@+id/CloudA"
         app:layout_constraintEnd_toStartOf="@+id/pauseButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -49,40 +49,42 @@
         android:layout_marginStart="115dp"
         android:layout_marginLeft="115dp"
         android:layout_marginTop="7dp"
+        android:layout_marginBottom="22dp"
         android:text="Pause"
+        app:layout_constraintBottom_toTopOf="@+id/CloudC"
         app:layout_constraintStart_toEndOf="@+id/progressBar"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/CloudA"
-        android:layout_width="188dp"
-        android:layout_height="56dp"
+        android:layout_width="222dp"
+        android:layout_height="77dp"
         android:src="@drawable/clouda"
-        tools:layout_editor_absoluteX="-42dp"
-        tools:layout_editor_absoluteY="93dp" />
+        tools:layout_editor_absoluteX="-46dp"
+        tools:layout_editor_absoluteY="80dp" />
 
     <ImageView
         android:id="@+id/CloudB"
-        android:layout_width="243dp"
-        android:layout_height="57dp"
+        android:layout_width="257dp"
+        android:layout_height="83dp"
         android:src="@drawable/cloudb"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="157dp" />
 
     <ImageView
         android:id="@+id/CloudC"
-        android:layout_width="224dp"
-        android:layout_height="47dp"
+        android:layout_width="298dp"
+        android:layout_height="78dp"
         android:src="@drawable/cloudc"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="77dp" />
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="50dp" />
 
     <ImageView
         android:id="@+id/CloudD"
-        android:layout_width="224dp"
-        android:layout_height="47dp"
+        android:layout_width="265dp"
+        android:layout_height="78dp"
         android:src="@drawable/cloudd"
-        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteX="214dp"
         tools:layout_editor_absoluteY="124dp" />
 
     <ImageButton
@@ -93,7 +95,7 @@
         android:background="#C3DFF3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CloudB"
         app:layout_constraintVertical_bias="0.0"
@@ -104,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/bullet"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="351dp" />
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="307dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

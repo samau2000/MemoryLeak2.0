@@ -24,9 +24,10 @@ public class Levels extends AppCompatActivity {
     float x, y;
     float x_bullet,y_bullet;
 
-    cloud1 = (ImageView)findViewById(R.id.Cloud1);
-    cloud2 = (ImageView)findViewById(R.id.Cloud2);
-    cloud3 = (ImageView)findViewById(R.id.Cloud3);
+    ImageView cloudA = (ImageView)findViewById(R.id.CloudA);
+    ImageView cloudB = (ImageView)findViewById(R.id.CloudB);
+    ImageView cloudC = (ImageView)findViewById(R.id.CloudC);
+    ImageView cloudD = (ImageView)findViewById(R.id.CloudD);
 
     //Question text
     public static TextView q_data;
