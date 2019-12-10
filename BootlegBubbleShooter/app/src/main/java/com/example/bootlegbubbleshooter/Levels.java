@@ -24,11 +24,10 @@ public class Levels extends AppCompatActivity {
     float x, y;
     float x_bullet,y_bullet;
 
-    ImageView cloudA = (ImageView)findViewById(R.id.CloudA);
-    ImageView cloudB = (ImageView)findViewById(R.id.CloudB);
-    ImageView cloudC = (ImageView)findViewById(R.id.CloudC);
-    ImageView cloudD = (ImageView)findViewById(R.id.CloudD);
-
+    ImageView cloudA ;
+    ImageView cloudB ;
+//    ImageView cloudC = (ImageView)findViewById(R.id.CloudC);
+//    ImageView cloudD = (ImageView)findViewById(R.id.CloudD);
 
     //Question text
     public static TextView q_data;
@@ -38,6 +37,13 @@ public class Levels extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
+
+        cloudA = (ImageView)findViewById(R.id.CloudA);
+        cloudA.setX(-46); cloudA.setY(80);
+
+//        cloudB.setX(27); cloudB.setY(157);
+//        cloudC.setX(87); cloudC.setY(50);
+//        cloudD.setX(214); cloudD.setY(124);
 
         timer.schedule(new TimerTask()
         {
@@ -110,34 +116,36 @@ public class Levels extends AppCompatActivity {
         }
 
         bullet.setY(y_bullet);
-        /*
-        cloud1Y +=10;
-        if(cloud1.getY() > screenHeight)
-        {
-            cloud1X = 1*screenWidth/5;//(float)Math.floor(Math.random() * (screenWidth - cloud1.getWidth()));
-            cloud1Y = -195.0f;
-        }
-        cloud1.setX(cloud1X);
-        cloud1.setY(cloud1Y);
+//
+//        float cloudAX = cloudA.getX();
+//        float cloudAY = cloudA.getY();
+//        cloudAY +=10;
+//        if(cloudA.getY() > screenHeight)
+//        {
+//            cloudAX = 1*screenWidth/5;//(float)Math.floor(Math.random() * (screenWidth - cloud1.getWidth()));
+//            cloudAY = -195.0f;
+//        }
+//        cloudA.setX(cloudAX);
+//        cloudA.setY(cloudAY + 10);
 
-        cloud2Y +=10;
-        if(cloud2.getY() > screenHeight)
-        {
-            cloud2X = screenWidth/1000;//(float)Math.floor(Math.random() * (screenWidth - cloud2.getWidth()));
-            cloud2Y = -100.0f;
-        }
-        cloud2.setX(cloud2X);
-        cloud2.setY(cloud2Y);
+//        cloud2Y +=10;
+//        if(cloud2.getY() > screenHeight)
+//        {
+//            cloud2X = screenWidth/1000;//(float)Math.floor(Math.random() * (screenWidth - cloud2.getWidth()));
+//            cloud2Y = -100.0f;
+//        }
+//        cloud2.setX(cloud2X);
+//        cloud2.setY(cloud2Y);
+//
+//        cloud3Y +=10;
+//        if(cloud3.getY() > screenHeight)
+//        {
+//            cloud3X = 1*screenWidth/2;//(float)Math.floor(Math.random() * (screenWidth - cloud3.getWidth()));
+//            cloud3Y = -100.0f;
+//        }
+//        cloud3.setX(cloud3X);
+//        cloud3.setY(cloud3Y);
 
-        cloud3Y +=10;
-        if(cloud3.getY() > screenHeight)
-        {
-            cloud3X = 1*screenWidth/2;//(float)Math.floor(Math.random() * (screenWidth - cloud3.getWidth()));
-            cloud3Y = -100.0f;
-        }
-        cloud3.setX(cloud3X);
-        cloud3.setY(cloud3Y);
-    */
     }
 
 
