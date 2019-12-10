@@ -3,6 +3,7 @@ package com.example.bootlegbubbleshooter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -10,12 +11,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Levels extends AppCompatActivity {
     ImageButton rocketButton;
     ImageView bullet;
 
+    private Handler handler = new Handler();
+    private Timer timer = new Timer();
+
     float x, y;
     float x_bullet,y_bullet;
+
+    cloud1 = (ImageView)findViewById(R.id.Cloud1);
+    cloud2 = (ImageView)findViewById(R.id.Cloud2);
+    cloud3 = (ImageView)findViewById(R.id.Cloud3);
 
     //Question text
     public static TextView q_data;
@@ -25,6 +36,22 @@ public class Levels extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
+
+        timer.schedule(new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                handler.post(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        changePos();
+                    }
+                });
+            }
+        },0,10);
 
         rocketButton = (ImageButton)findViewById(R.id.imageButton6);
         bullet = (ImageView)findViewById(R.id.imageView2);
@@ -66,6 +93,37 @@ public class Levels extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void changePos()
+    {
+        cloud1Y +=10;
+        if(cloud1.getY() > screenHeight)
+        {
+            cloud1X = 1*screenWidth/5;//(float)Math.floor(Math.random() * (screenWidth - cloud1.getWidth()));
+            cloud1Y = -195.0f;
+        }
+        cloud1.setX(cloud1X);
+        cloud1.setY(cloud1Y);
+
+        cloud2Y +=10;
+        if(cloud2.getY() > screenHeight)
+        {
+            cloud2X = screenWidth/1000;//(float)Math.floor(Math.random() * (screenWidth - cloud2.getWidth()));
+            cloud2Y = -100.0f;
+        }
+        cloud2.setX(cloud2X);
+        cloud2.setY(cloud2Y);
+
+        cloud3Y +=10;
+        if(cloud3.getY() > screenHeight)
+        {
+            cloud3X = 1*screenWidth/2;//(float)Math.floor(Math.random() * (screenWidth - cloud3.getWidth()));
+            cloud3Y = -100.0f;
+        }
+        cloud3.setX(cloud3X);
+        cloud3.setY(cloud3Y);
+
+    }
 
 
 }

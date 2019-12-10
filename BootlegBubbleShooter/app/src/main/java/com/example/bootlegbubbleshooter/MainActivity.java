@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-        },0,10);
+        },0,10); 
 
         //Start Button
         StartButton.setOnClickListener(new View.OnClickListener() {
