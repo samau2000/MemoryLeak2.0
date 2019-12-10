@@ -2,6 +2,7 @@ package com.example.bootlegbubbleshooter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
@@ -96,6 +97,13 @@ public class Levels extends AppCompatActivity {
         q_data = (TextView) findViewById(R.id.QuestionBox);
         fetchQuestionData process2 = new fetchQuestionData();
         process2.execute();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 
     @Override

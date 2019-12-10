@@ -1,5 +1,6 @@
 package com.example.bootlegbubbleshooter;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
@@ -29,3 +30,4 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 }
+
