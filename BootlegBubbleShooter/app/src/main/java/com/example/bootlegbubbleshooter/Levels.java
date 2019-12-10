@@ -7,6 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Levels extends AppCompatActivity {
@@ -15,6 +16,9 @@ public class Levels extends AppCompatActivity {
 
     float x, y;
     float x_bullet,y_bullet;
+
+    //Question text
+    public static TextView q_data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,10 @@ public class Levels extends AppCompatActivity {
             }
         });
 
+        //Question Data
+        q_data = (TextView) findViewById(R.id.QuestionBox);
+        fetchQuestionData process2 = new fetchQuestionData();
+        process2.execute();
     }
 
     @Override
