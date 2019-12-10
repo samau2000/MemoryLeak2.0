@@ -23,10 +23,13 @@ public class Levels extends AppCompatActivity {
 
     float x, y;
     float x_bullet,y_bullet;
+    //initialize cloud/positions
     float cloudAY;
     float cloudAYorig;
-
     ImageView cloudA ;
+
+    float cloudBY;
+    float cloudBYorig;
     ImageView cloudB ;
 //    ImageView cloudC = (ImageView)findViewById(R.id.CloudC);
 //    ImageView cloudD = (ImageView)findViewById(R.id.CloudD);
@@ -44,6 +47,11 @@ public class Levels extends AppCompatActivity {
         cloudA.setX(-46); cloudA.setY(80);
         cloudAY = cloudA.getY();
         cloudAYorig= cloudAY;
+
+        cloudB = (ImageView)findViewById(R.id.CloudB);
+        cloudB.setX(500);cloudB.setY(80);
+        cloudBY=cloudB.getY();
+        cloudBYorig=cloudBY;
 
 
 //        cloudB.setX(27); cloudB.setY(157);
@@ -132,7 +140,16 @@ public class Levels extends AppCompatActivity {
            cloudAY=0.0f;
        }
        cloudA.setY(cloudAY);
-        {
+
+       cloudBY +=10;
+
+       if(cloudB.getY() > 2600) {
+           cloudBY=0.0f;
+       }
+       cloudB.setY(cloudBY);
+
+
+
  //           cloudAX = 1*screenWidth/5;//(float)Math.floor(Math.random() * (screenWidth - cloud1.getWidth()));
 //            cloudAY = -195.0f;
 //        }
@@ -157,7 +174,8 @@ public class Levels extends AppCompatActivity {
 //        cloud3.setX(cloud3X);
 //        cloud3.setY(cloud3Y);
 
-    }
 
 
-}}
+
+}
+}
