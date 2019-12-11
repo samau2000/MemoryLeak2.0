@@ -16,24 +16,43 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Levels extends AppCompatActivity {
-    ImageButton rocketButton;
+
+    // BULLET INITIALIZATION - BEGIN
     ImageView bullet;
+    float x_bullet, y_bullet;
+    // BULLET - END
 
-    private Handler handler = new Handler();
-    private Timer timer = new Timer();
 
-    float x, y;
-    float x_bullet,y_bullet;
-    //initialize cloud/positions
+    // ROCKET INITIALIZATION - BEGIN
+    ImageButton rocketButton;
+    float rocketX;
+    float rocketY;
+    // ROCKET - END
+
+
+    // CLOUDs A, B, C, D INITIALIZATIONS - BEGIN
+    ImageView cloudA;
+    ImageView cloudB;
+    ImageView cloudC;
+    ImageView cloudD;
     float cloudAY;
     float cloudAYorig;
-    ImageView cloudA ;
-
     float cloudBY;
     float cloudBYorig;
-    ImageView cloudB ;
-    ImageView cloudC ;
-    ImageView cloudD ;
+    // CLOUDS A, B, C, D - END
+
+
+    // TIME HANDLER INITIALIZATION - BEGIN
+    private Handler handler = new Handler();
+    private Timer timer = new Timer();
+    // TIME HANDLER - END
+
+
+    // SCREEN SIZE INITIALIZATION - BEGIN
+    private int screenWidth;
+    private int screenHeight;
+    // SCREEN SIZE END
+
 
     //Question text
     public static TextView q_data;
@@ -44,49 +63,64 @@ public class Levels extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
 
-        cloudA = (ImageView)findViewById(R.id.CloudA);
-        cloudA.setX(cloudA.getX()); cloudA.setY(cloudA.getY());
+        rocketButton = (ImageButton) findViewById(R.id.imageButton6);
+        bullet = (ImageView) findViewById(R.id.imageView2);
+        bullet.setVisibility(View.VISIBLE);
+
+        rocketX = rocketButton.getX();
+        rocketY = rocketButton.getY();
+        rocketButton.setX(rocketX);
+        rocketButton.setY(rocketY);
+
+        cloudA = (ImageView) findViewById(R.id.CloudA);
+        cloudA.setX(cloudA.getX());
+        cloudA.setY(cloudA.getY());
 
         cloudAY = cloudA.getY();
-        cloudAYorig= cloudAY;
+        cloudAYorig = cloudAY;
 
-        cloudB = (ImageView)findViewById(R.id.CloudB);
-        cloudB.setX(cloudB.getX()); cloudB.setY(cloudB.getY());
-        cloudBY=cloudB.getY();
-        cloudBYorig=cloudBY;
+        cloudB = (ImageView) findViewById(R.id.CloudB);
+        cloudB.setX(cloudB.getX());
+        cloudB.setY(cloudB.getY());
+        cloudBY = cloudB.getY();
+        cloudBYorig = cloudBY;
 
-        cloudC = (ImageView)findViewById(R.id.CloudC);
-        cloudC.setX(cloudC.getX()); cloudC.setY(cloudC.getY());
-        cloudD = (ImageView)findViewById(R.id.CloudD);
-        cloudD.setX(cloudD.getX()); cloudD.setY(cloudD.getY());
-        timer.schedule(new TimerTask()
-        {
+        cloudC = (ImageView) findViewById(R.id.CloudC);
+        cloudC.setX(cloudC.getX());
+        cloudC.setY(cloudC.getY());
+        cloudD = (ImageView) findViewById(R.id.CloudD);
+        cloudD.setX(cloudD.getX());
+        cloudD.setY(cloudD.getY());
+
+        timer.schedule(new TimerTask() {
             @Override
-            public void run()
-            {
-                handler.post(new Runnable()
-                {
+            public void run() {
+                handler.post(new Runnable() {
                     @Override
-                    public void run()
-                    {
-                        changePos();
+                    public void run() {
+                        cloudA.setX(cloudA.getX());
+                        cloudB.setX(cloudB.getX());
+                        cloudC.setX(cloudC.getX());
+                        cloudD.setX(cloudD.getX());
+                        if (changePos())
+                        {
+                            bullet.setX(rocketButton.getX());
+                            bullet.setY(rocketButton.getY());
+                        }
                     }
                 });
             }
-        },0,10);
+        }, 0, 10);
 
-        rocketButton = (ImageButton)findViewById(R.id.imageButton6);
-        bullet = (ImageView)findViewById(R.id.imageView2);
-        bullet.setVisibility(View.GONE);
 
         rocketButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Levels.this, "It works", Toast.LENGTH_LONG).show();
-                x_bullet = rocketButton.getX() + 165;
-                y_bullet = rocketButton.getY() - 90;
-                bullet.setX(x_bullet);
-                bullet.setY(y_bullet);
+                //x_bullet = rocketButton.getX() + 165;
+//                y_bullet = rocketButton.getY() - 90;
+//                bullet.setX(x_bullet);
+//                bullet.setY(y_bullet);
                 bullet.setVisibility(View.VISIBLE);
 
 
@@ -102,59 +136,69 @@ public class Levels extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        rocketButton = (ImageButton)findViewById(R.id.imageButton6);
-        bullet = (ImageView)findViewById(R.id.imageView2);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 //Toast.makeText(Levels.this, "It works", Toast.LENGTH_LONG).show();
                 bullet.setVisibility(View.GONE);
 
             case MotionEvent.ACTION_MOVE:
-                rocketButton.setX((int) event.getX() - 165);
-                rocketButton.setY(900);
+                rocketButton.setX(event.getX() - 165);
         }
         return true;
     }
-    //initialize screen size
-    private int screenWidth;
-    private int screenHeight;
-
-    //cloudAY = cloudA.getY();
- //   float cloudAYorig= cloudAY;
-
-    public void changePos()
-    {
-
-        y_bullet-=10;
 
 
-        if(bullet.getY() < (float)screenHeight)
-        {
-           // y_bullet.setVisibility(View.GONE);
+    public boolean changePos() {
+
+//        cloudAY = cloudA.getY();
+//        float cloudAYorig= cloudAY;
+
+//        y_bullet -= 10;
+//
+//
+        boolean temp = false;
+        if (bullet.getY() < 2600) {
+             temp = true;
+             //bullet.setVisibility(View.GONE);
+        }
+//
+//        bullet.setY(y_bullet);
+
+        //    float cloudAX = cloudA.getX();
+
+
+
+
+        if (cloudA.getY() > 2600) {
+            cloudA.setY(0.0f);
+        }
+        if (cloudB.getY() > 2600) {
+            cloudB.setY(0.0f);
+        }
+        if (cloudC.getY() > 2600) {
+            cloudC.setY(0.0f);
+        }
+        if (cloudD.getY() > 2600) {
+            cloudD.setY(0.0f);
         }
 
-        bullet.setY(y_bullet);
+        cloudA.setY(cloudA.getY() + 5);
+        cloudB.setY(cloudB.getY() + 5);
+        cloudC.setY(cloudC.getY() + 5);
+        cloudD.setY(cloudD.getY() + 5);
+        bullet.setY(bullet.getY() - 10);
 
-   //    float cloudAX = cloudA.getX();
+        return temp;
 
-        cloudAY +=10;
-       if(cloudA.getY() > 2600) {
-           cloudAY=0.0f;
-       }
-       cloudA.setY(cloudAY);
 
-       cloudBY +=10;
-
-       if(cloudB.getY() > 2600) {
-           cloudBY=0.0f;
-       }
-       cloudB.setY(cloudBY);
+    }
+}
 
 
 
@@ -184,6 +228,3 @@ public class Levels extends AppCompatActivity {
 
 
 
-
-}
-}
