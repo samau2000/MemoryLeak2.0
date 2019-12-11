@@ -1,0 +1,28 @@
+Statement of Work
+Project Title: Memory Leak 2.0 
+Group Members: Daniel Li, Victor Hui, Julia Zeng, Jon Ngo, Samantha Au
+
+Introduction/ Background 
+Our project will be an Android app game written in java that has multiple levels to help its players understand C++. 
+Objectives 
+The objective of this project is to assist users to understand the basics of C++ computer language, and our overarching goal is to create an educational and interactive experience while allowing the user to have fun. 
+Scope of Work 
+Victor Hui: Project Lead
+Organize and maintain a schedule of the work needed to be done for the project.
+Responsible for the main mechanics/aesthetics of the quiz portion of the game including theme design and tie-in to the rest of the game.
+Daniel Li: Specification Lead
+Checks the performance, functionality, and software architecture of the game; create a short powerpoint regarding the overall software architecture descriptions 
+In charge of the aesthetics/theme/animation/soundtrack of the main screen and part of the game interface and creating an online database of questions and fun facts that the app will retrieve by using the Internet.
+Julia Zeng: Interface Lead
+Responsible for the game to be graphically pleasing.
+Contributed to back end functionality of the program and methods for player-game interaction and collision detection.
+Jon Ngo: Technical Lead
+Responsible for testing/error checking, algorithm, and the exchange of data between the GUI and the backend code (Java).
+Contributed to core aspects of the main game, including bullet and choice cloud movement. 
+Samantha Au: Documentation Lead
+Responsible for two documents: Statement of Work and Project Documentation and a short video presentation.
+Contributed to the point system, the design, and the database (gathering of questions/variations) of the boss level.
+
+
+Sign Contract:
+	We, the group of Victor Hui, Daniel Li, Julia Zeng, Jon Ngo, Samantha Au, do hereby declare that each person is liable for any discrepancies in quality within each scope of work, that each member is responsible for unforeseen hardships that arise, and we do hereby promise that said hardships shall not be of any excuse for any qualitative lapse unless agreed upon by the group.
