@@ -24,6 +24,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/imageButton6"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="201dp"-->
+    <!--        android:background="#C3DFF3"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.498"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/CloudB"-->
+    <!--        app:layout_constraintVertical_bias="0.0"-->
+    <!--        app:srcCompat="@drawable/rocket" />-->
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
@@ -40,73 +54,94 @@
         app:layout_constraintBottom_toTopOf="@+id/CloudA"
         app:layout_constraintEnd_toStartOf="@+id/pauseButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
 
     <Button
         android:id="@+id/pauseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
-        android:layout_marginLeft="115dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
         android:layout_marginTop="7dp"
         android:layout_marginBottom="22dp"
         android:text="Pause"
         app:layout_constraintBottom_toTopOf="@+id/CloudC"
         app:layout_constraintStart_toEndOf="@+id/progressBar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/CloudA"
         android:layout_width="222dp"
         android:layout_height="77dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginRight="240dp"
         android:src="@drawable/clouda"
-        tools:layout_editor_absoluteX="-46dp"
-        tools:layout_editor_absoluteY="80dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
 
     <ImageView
-        android:id="@+id/CloudB"
-        android:layout_width="257dp"
-        android:layout_height="83dp"
-        android:src="@drawable/cloudb"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="157dp" />
+        android:id="@+id/CloudD"
+        android:layout_width="265dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginLeft="212dp"
+        android:src="@drawable/cloudd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163" />
 
     <ImageView
         android:id="@+id/CloudC"
         android:layout_width="298dp"
         android:layout_height="78dp"
         android:src="@drawable/cloudc"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="50dp" />
-
-    <ImageView
-        android:id="@+id/CloudD"
-        android:layout_width="265dp"
-        android:layout_height="78dp"
-        android:src="@drawable/cloudd"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="124dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="201dp"
-        android:background="#C3DFF3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CloudB"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/rocket" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <ImageView
+        android:id="@+id/CloudB"
+        android:layout_width="257dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/cloudb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bullet"
-        tools:layout_editor_absoluteX="188dp"
-        tools:layout_editor_absoluteY="307dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageButton6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bullet" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#C3DFF3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.658"
+        app:srcCompat="@drawable/rocket3copy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

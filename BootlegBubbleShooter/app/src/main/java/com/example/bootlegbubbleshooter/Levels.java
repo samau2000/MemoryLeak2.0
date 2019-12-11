@@ -32,8 +32,8 @@ public class Levels extends AppCompatActivity {
     float cloudBY;
     float cloudBYorig;
     ImageView cloudB ;
-//    ImageView cloudC = (ImageView)findViewById(R.id.CloudC);
-//    ImageView cloudD = (ImageView)findViewById(R.id.CloudD);
+    ImageView cloudC ;
+    ImageView cloudD ;
 
     //Question text
     public static TextView q_data;
@@ -45,20 +45,20 @@ public class Levels extends AppCompatActivity {
         setContentView(R.layout.activity_levels);
 
         cloudA = (ImageView)findViewById(R.id.CloudA);
-        cloudA.setX(-46); cloudA.setY(80);
+        cloudA.setX(cloudA.getX()); cloudA.setY(cloudA.getY());
+
         cloudAY = cloudA.getY();
         cloudAYorig= cloudAY;
 
         cloudB = (ImageView)findViewById(R.id.CloudB);
-        cloudB.setX(500);cloudB.setY(80);
+        cloudB.setX(cloudB.getX()); cloudB.setY(cloudB.getY());
         cloudBY=cloudB.getY();
         cloudBYorig=cloudBY;
 
-
-//        cloudB.setX(27); cloudB.setY(157);
-//        cloudC.setX(87); cloudC.setY(50);
-//        cloudD.setX(214); cloudD.setY(124);
-
+        cloudC = (ImageView)findViewById(R.id.CloudC);
+        cloudC.setX(cloudC.getX()); cloudC.setY(cloudC.getY());
+        cloudD = (ImageView)findViewById(R.id.CloudD);
+        cloudD.setX(cloudD.getX()); cloudD.setY(cloudD.getY());
         timer.schedule(new TimerTask()
         {
             @Override
