@@ -1,0 +1,95 @@
+Project timeline - Memory Leak 2
+Samantha, Daniel, Julia, Jon, Victor
+
+Initial meeting (16/11/19)
+Decided that we wish to do an android application
+decided that it would be a game
+project alternatives
+clothes changing app
+anxiety app
+day planner
+etc
+decided that an android called memory leak will be created, objective is to delete/ destroy falling blocks of code that would break/ damage applications, a shooter will be used to destroy blocks containing “broken” code.
+Pros
+interactive
+fun
+applicable to the class
+interesting to code
+Cons
+higher level of difficulty
+a lot to do basically
+meeting ended at 12:00 am.
+
+Meeting number 2 (3/12/19)
+Sorted out roles between members
+Project Lead: Victor Hui
+Specification Lead: Daniel Li
+Interface Lead: Julia Zeng 
+Technical Lead: Jonathan Ngo 
+decided that the next meeting would be Friday 6/12/19, in order to check progress on the different members
+Separated tasks in between different team members
+2 team members will work on the Boss level
+Sam Au would be responsible for the sound portion of the game, the HP bar of the bosses, and the timer between each choice during the quiz
+Victor Hui would be responsible for the Quiz mechanics part of the game, and the face/ animation of the question 
+3 team members will work on the Normal Levels
+Daniel and Julia will be responsible for the front end, while Jon will be responsible for 
+2 team members will work on the Quiz/Boss level
+Victor and Sam would work on the Boss level.
+First sketch of project homescreen, and quizz interface 8/12/2019
+			
+as you can see, the theme of the homescreen and quizz interface was completely different, but this was solved further along in the app development process
+At this point, the homescreen had animations running in the background and the mechanics of the Quizzes in the Boss levels work well. 
+First attempt at the “Normal Level”, main mechanics of the game 8/12/2019
+
+As it can be seen, the mechanics have not yet been added, the rocket/cannon/ shooter has not yet been implemented, the bullet action is also missing, but as the first sketch, a lot of progress was made today.
+
+
+
+
+
+
+
+
+
+
+Meeting No.3 (9/12/2019)
+We touched base on who has done what, separated the tasks regarding the documents, and made further progress on the design of the app in order to improve overall user experience.
+
+
+
+Refreshed look of the project home screen and Quiz screen
+ 
+
+The design of the app is improved immensely, there is now a theme of adventure and progress attached.
+As for the shooter, we have decided to go with a rocket to increase the sense of progress as it soars into the open sky. 
+Double tapping the rocket would now generate a bullet heading up
+
+
+
+
+
+
+
+
+
+The only change here is the changing of the background to fit it to the theme of adventure.
+
+
+
+
+
+
+
+
+
+
+
+Meeting No.4 (10/12/19)
+Met to sort out documentation responsibilities
+Further improved UI design,
+Worked on the General Game Mechanics
+
+The design for the quiz app is further improved 
+
+Health bar introduced, when the player answers the Boss correctly, the bosses’ health bar decreases, when the player answers the Boss wrongly, the player’s health decreases.
+We also gave Professor densmore a helmet.
